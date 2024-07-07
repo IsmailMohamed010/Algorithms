@@ -1,3 +1,9 @@
+#include <iostream>
+
+#define ll long long
+
+using namespace std;
+
 int main() {
     ll n = 0;
     cin >> n;
@@ -9,15 +15,13 @@ int main() {
         cin >> arr[it];
         sum+=arr[it];
         ans = max(ans,sum);
-        ans1[it] = ans;
         if(sum < 0)
             sum = 0;
     }
-    for(auto it : ans1)
-        cout << it << " ";
+    cout << ans;
     return 0;
 }
 
 
-// Kadane's Algorithm: to find maximum sum for subarray or minimam.
+// Kadane's Algorithm: to find the maximum sum for subarray or minimum.
 // Toturial: https://youtu.be/yVeqKMgvUXo?si=mpuVUZhV-__VqNyi
